@@ -30,7 +30,7 @@ public class Main {
         System.out.println("isPossible is: " + isPossible);
     }
 
-    public static boolean validate(String inputString) {
+    public static void validate(String inputString) {
         int stringLength = inputString.length();
         int i = stringLength - 1;
         StringBuilder reverseString = new StringBuilder(inputString).reverse();
@@ -39,7 +39,7 @@ public class Main {
             reverseString2.append(inputString.charAt(i));
             i--;
         }
-        return reverseString.toString().equals(reverseString2.toString());
+        System.out.print(reverseString.toString().equals(reverseString2.toString()));
     }
 
     public static void main(String[] args) {
