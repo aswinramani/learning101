@@ -1,5 +1,22 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+class References {
+    int num;
+}
+
+class FatherPanda {
+    public static final boolean isPredator = false;
+    protected static final int weight = 5;
+    private static final int age = 0;
+    public void eat() {
+        System.out.println("Is father panda predator. " + isPredator);
+        System.out.println("After each meal, Father Panda gains weight: " + weight);
+        System.out.println("His age is: " + age);
+    }
+}
+
+
+
 public class Main {
     public static void printSum() {
         // fix the code
@@ -7,9 +24,8 @@ public class Main {
         byte numTwo = 110;
         short sumOfTwoNumbers = numOne;
         sumOfTwoNumbers += numTwo;
-        System.out.print("Sum: " + sumOfTwoNumbers);
+        System.out.println("Sum: " + sumOfTwoNumbers);
     }
-
 
     public static void variableDeclarationChallenge() {
         byte age = 10;
@@ -42,6 +58,30 @@ public class Main {
         System.out.print(reverseString.toString().equals(new String(reverseString2)));
     }
 
+    public static void initReferencing() {
+        System.out.println("init referencing");
+        int i = 10;
+        int j = 5;
+        System.out.println(i + " " + j);
+        i = j;
+        System.out.println(i + " " + j);
+        j++;
+        System.out.println(i + " " + j);
+
+        References ref1 = new References();
+        References ref2 = new References();
+        ref2 = ref1;
+        ref1.num = 15;
+        System.out.println(ref1.num + " " + ref2.num);
+        ref2.num++;
+        System.out.println(ref1.num + " " + ref2.num);
+        System.out.println("end referencing");
+    }
+
+    public static void initFatherPanda() {
+        FatherPanda father = new FatherPanda();
+        father.eat();
+    }
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
@@ -49,5 +89,7 @@ public class Main {
         Main.validate(inputString);
         Main.variableDeclarationChallenge();
         Main.printSum();
+        Main.initReferencing();
+        Main.initFatherPanda();
     }
 }
