@@ -11,7 +11,7 @@ public class Main {
     }
 
 
-    public static void variableDeclarationChallenge(boolean valid) {
+    public static void variableDeclarationChallenge() {
         byte age = 10;
         System.out.println("age is: " + age);
         short height =  30000;
@@ -46,8 +46,8 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         String inputString = "hello";
-        boolean valid = Main.validate(inputString);
-        Main.variableDeclarationChallenge(valid);
+        Main.validate(inputString);
+        Main.variableDeclarationChallenge();
         Main.printSum();
     }
 }
