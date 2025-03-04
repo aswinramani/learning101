@@ -39,7 +39,7 @@ public class Main {
             reverseString2.append(inputString.charAt(i));
             i--;
         }
-        System.out.print(reverseString.toString().equals(reverseString2.toString()));
+        System.out.print(reverseString.toString().equals(new String(reverseString2)));
     }
 
     public static void main(String[] args) {
