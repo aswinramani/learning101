@@ -10,16 +10,24 @@ public class Main {
         System.out.print("Sum: " + sumOfTwoNumbers);
     }
 
+
     public static void variableDeclarationChallenge(boolean valid) {
         byte age = 10;
-        System.out.println("Age is: " + age);
+        System.out.println("age is: " + age);
         short height =  30000;
+        System.out.println("height is: " + height);
         int distanceBetweenTwoSatellites = 1000000000;
+        System.out.println("distanceBetweenTwoSatellites is: " + distanceBetweenTwoSatellites);
         long distanceBetweenTwoGalaxy = 10000000000L;
+        System.out.println("distanceBetweenTwoGalaxy is: " + distanceBetweenTwoGalaxy);
         float rateOfInterest = 6/5f;
+        System.out.println("rateOfInterest is: " + rateOfInterest);
         double rateOfHike = 456/123d;
+        System.out.println("rateOfHike is: " + rateOfHike);
         char capitalA = 'A';
+        System.out.println("capitalA is: " + capitalA);
         boolean isPossible = true;
+        System.out.println("isPossible is: " + isPossible);
     }
 
     public static boolean validate(String inputString) {
