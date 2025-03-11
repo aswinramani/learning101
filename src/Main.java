@@ -1,5 +1,8 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import algos.BasicAlgo;
+
 class References {
     int num;
 }
@@ -122,6 +125,11 @@ public class Main {
         System.out.println(Integer.valueOf(binaryString3));
     }
 
+    public static void initFrequencyDigits() {
+        BasicAlgo ba = new BasicAlgo();
+        System.out.println("frequency : " + ba.frequencyDigits(1122322, 2));
+    }
+
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
@@ -132,5 +140,6 @@ public class Main {
         Main.initFatherPanda();
         Main.initRLVariables();
         Main.initTypeCasting();
+        Main.initFrequencyDigits();
     }
 }
