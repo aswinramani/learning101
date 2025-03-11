@@ -26,6 +26,19 @@ class RLVariables {
     }
 }
 
+class TypeConversion {
+    public String decimalToBinary(Integer num) {
+        boolean isPositive = num > 0;
+//        String binary = Integer.toBinaryString(num); in built java function
+        StringBuilder sb = new StringBuilder();
+        while (num > 0) {
+            sb.insert(0, num % 2);
+            num /= 2;
+        }
+        return isPositive ? sb.toString() : num.toString();
+    }
+}
+
 
 
 public class Main {
@@ -98,15 +111,26 @@ public class Main {
         RLVariables secret = new RLVariables();
         secret.displaySecret();
     }
+
+    public static void initTypeCasting() {
+        TypeConversion tc = new TypeConversion();
+        String binaryString1 = tc.decimalToBinary(2);
+        System.out.println(Integer.valueOf(binaryString1));
+        String binaryString2 = tc.decimalToBinary(5);
+        System.out.println(Integer.valueOf(binaryString2));
+        String binaryString3 = tc.decimalToBinary(10);
+        System.out.println(Integer.valueOf(binaryString3));
+    }
+
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        String inputString = "hello";
-        Main.validate(inputString);
+        Main.validate("hello");
         Main.variableDeclarationChallenge();
         Main.printSum();
         Main.initReferencing();
         Main.initFatherPanda();
         Main.initRLVariables();
+        Main.initTypeCasting();
     }
 }
