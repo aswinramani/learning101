@@ -15,6 +15,17 @@ class FatherPanda {
     }
 }
 
+class RLVariables {
+    private int mySecretNumber = 10;
+
+    public void displaySecret() {
+        System.out.println("Reference variable accessing instance variable: " + mySecretNumber);
+        mySecretNumber = 45;
+        System.out.println("Local Variable: " + mySecretNumber);
+        System.out.println("Reference variable accessing instance variable that points to the local variable: " + mySecretNumber);
+    }
+}
+
 
 
 public class Main {
@@ -82,6 +93,11 @@ public class Main {
         FatherPanda father = new FatherPanda();
         father.eat();
     }
+
+    public static void initRLVariables() {
+        RLVariables secret = new RLVariables();
+        secret.displaySecret();
+    }
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
@@ -91,5 +107,6 @@ public class Main {
         Main.printSum();
         Main.initReferencing();
         Main.initFatherPanda();
+        Main.initRLVariables();
     }
 }
