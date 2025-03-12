@@ -22,12 +22,12 @@ public class QuickSort {
     }
 
     public void init(int[] arr, int low, int high) {
-        System.out.println("arr length : " + String.valueOf(arr.length));
         System.out.println("low : " + low);
         System.out.println("high : " + high);
         // sort recursively using pivot and swap elements for sorting
         if (low < high) {
             int pivotIndex = partition(arr, low, high);
+            System.out.println("pivotIndex : " + pivotIndex);
         }
     }
 }
