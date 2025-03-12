@@ -1,11 +1,5 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-
-import algos.BasicAlgo;
-
-class References {
-    int num;
-}
+import algos.FrequencyOfDigits;
+import algos.QuickSort;
 
 class FatherPanda {
     public static final boolean isPredator = false;
@@ -41,8 +35,6 @@ class TypeConversion {
         return isPositive ? sb.toString() : num.toString();
     }
 }
-
-
 
 public class Main {
     public static void printSum() {
@@ -85,26 +77,6 @@ public class Main {
         System.out.print(reverseString.toString().equals(new String(reverseString2)));
     }
 
-    public static void initReferencing() {
-        System.out.println("init referencing");
-        int i = 10;
-        int j = 5;
-        System.out.println(i + " " + j);
-        i = j;
-        System.out.println(i + " " + j);
-        j++;
-        System.out.println(i + " " + j);
-
-        References ref1 = new References();
-        References ref2 = new References();
-        ref2 = ref1;
-        ref1.num = 15;
-        System.out.println(ref1.num + " " + ref2.num);
-        ref2.num++;
-        System.out.println(ref1.num + " " + ref2.num);
-        System.out.println("end referencing");
-    }
-
     public static void initFatherPanda() {
         FatherPanda father = new FatherPanda();
         father.eat();
@@ -126,8 +98,18 @@ public class Main {
     }
 
     public static void initFrequencyDigits() {
-        BasicAlgo ba = new BasicAlgo();
-        System.out.println("frequency : " + ba.frequencyDigits(1122322, 2));
+        FrequencyOfDigits ba = new FrequencyOfDigits();
+        System.out.println("frequency : " + ba.init(1122322, 2));
+    }
+
+    public static void initQuickSort() {
+        QuickSort qs = new QuickSort();
+        int[][] testInput = {
+                {8, 3, 6, 5, 4, 2}
+        };
+        for (int[] input: testInput) {
+            qs.init(input, 0, input.length-1);
+        }
     }
 
     public static void main(String[] args) {
@@ -136,10 +118,10 @@ public class Main {
         Main.validate("hello");
         Main.variableDeclarationChallenge();
         Main.printSum();
-        Main.initReferencing();
         Main.initFatherPanda();
         Main.initRLVariables();
         Main.initTypeCasting();
         Main.initFrequencyDigits();
+        Main.initQuickSort();
     }
 }
