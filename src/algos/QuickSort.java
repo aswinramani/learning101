@@ -1,6 +1,6 @@
 package algos;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class QuickSort {
 //    private int counter = 0;
