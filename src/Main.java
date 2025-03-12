@@ -107,10 +107,11 @@ public class Main {
     public static void initQuickSort() {
         QuickSort qs = new QuickSort();
         int[][] testInput = {
-                {8, 3, 6, 5, 4, 2}
+                {8, 3, 6, 5, 4, 2},
+                {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
         };
         for (int[] input: testInput) {
-            System.out.println("input : " + Arrays.toString(input));
+            System.out.println("input : " + Arrays.toString(input) + ", length : " +  input.length);
             qs.init(input, 0, input.length-1);
             System.out.println("output : " + Arrays.toString(input));
         }
