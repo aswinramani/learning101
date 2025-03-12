@@ -1,6 +1,8 @@
 import algos.FrequencyOfDigits;
 import algos.QuickSort;
 
+import java.util.Arrays;
+
 class FatherPanda {
     public static final boolean isPredator = false;
     protected static final int weight = 5;
@@ -108,7 +110,9 @@ public class Main {
                 {8, 3, 6, 5, 4, 2}
         };
         for (int[] input: testInput) {
+            System.out.println("input : " + Arrays.toString(input));
             qs.init(input, 0, input.length-1);
+            System.out.println("output : " + Arrays.toString(input));
         }
     }
 
