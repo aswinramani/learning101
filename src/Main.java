@@ -1,7 +1,4 @@
-import algos.FrequencyOfDigits;
-import algos.QuickSort;
-import algos.FibonacciSum;
-import algos.ReverseNumber;
+import algos.*;
 
 import java.util.Arrays;
 
@@ -147,6 +144,21 @@ public class Main {
             System.out.println("output : " + output);
         }
     }
+
+    public static void initNegAndOddSum() {
+        System.out.println("Init Reverse Number");
+        int[][] testInput = {
+                {20, -1, 10, 3, -5},
+                {-10, -20, -5, 15},
+                {-10, 15, -1, -8, 7}
+        };
+        for (int[] input : testInput) {
+            System.out.println("input : " + Arrays.toString(input));
+            int NegAndOddSum = NegAndOdd.init(input);
+            System.out.println("NegAndOddSum : " + NegAndOddSum);
+        }
+    }
+
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
@@ -160,5 +172,6 @@ public class Main {
         Main.initQuickSort();
         Main.initFibonacci();
         Main.initReverseNumber();
+        Main.initNegAndOddSum();
     }
 }
