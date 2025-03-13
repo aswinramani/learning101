@@ -1,6 +1,8 @@
 import algos.FrequencyOfDigits;
 import algos.QuickSort;
 import algos.FibonacciSum;
+import algos.ReverseNumber;
+
 import java.util.Arrays;
 
 class FatherPanda {
@@ -132,6 +134,19 @@ public class Main {
         }
     }
 
+    public static void initReverseNumber() {
+        System.out.println("Init Reverse Number");
+        int[] testInput = {
+                123456,
+                765894,
+                98765
+        };
+        for (int input : testInput) {
+            System.out.println("input : " + input);
+            int output = ReverseNumber.init(input);
+            System.out.println("output : " + output);
+        }
+    }
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
@@ -144,5 +159,6 @@ public class Main {
         Main.initFrequencyDigits();
         Main.initQuickSort();
         Main.initFibonacci();
+        Main.initReverseNumber();
     }
 }
