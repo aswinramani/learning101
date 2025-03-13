@@ -1,6 +1,6 @@
 import algos.FrequencyOfDigits;
 import algos.QuickSort;
-
+import algos.FibonacciSum;
 import java.util.Arrays;
 
 class FatherPanda {
@@ -117,6 +117,21 @@ public class Main {
         }
     }
 
+    public static void initFibonacci() {
+        int[] testInput = {
+                1,
+                2,
+                3,
+                4,
+                5
+        };
+        for (int input: testInput) {
+            System.out.println("input : " + input);
+            int computedSum = FibonacciSum.init(input);
+            System.out.println("output : " + computedSum);
+        }
+    }
+
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
@@ -128,5 +143,6 @@ public class Main {
         Main.initTypeCasting();
         Main.initFrequencyDigits();
         Main.initQuickSort();
+        Main.initFibonacci();
     }
 }
